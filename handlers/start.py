@@ -19,13 +19,13 @@ Bot : @Crystalisticbot - Asisten : @Assistencrystal
                         "⚡ Owner Aku!", url="https://t.me/afterdaytoxic")
                   ],[
                     InlineKeyboardButton(
-                        "🍃 Channel Aku!", url="https://t.me/captionanakmuda")
+                        "🍃 Channel Aku!", url="https://t.me/captionanakmuda"
                     ),
                     InlineKeyboardButton(
                         "❤️ Grup Aku!", url="https://t.me/humangabutguys") 
                   ],[
                     InlineKeyboardButton(
-                        "👸 My Bot Help!", url="https://t.me/naylaanggitabot")
+                        "👸 My Bot Help!", url="https://t.me/naylaanggitabot"
                     )
                 ]
             ]
