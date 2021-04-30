@@ -1,8 +1,8 @@
-<h1 align="centre">🎵 BOT MUSIC MAN 🎵</h1>
+<h1 align="centre">🎵 CRYSTAL HEART MUSIC!</h1>
 
-### A bot that can play music on telegram group's voice call
+### Aku Pemutar Musik Di-Telegram, Aku Akan Menemani Ke-Galauan Di VOICE CHAT GRUP!
 
-<h2> Whats new 🔥 </h2>
+<h2> FITUR BARU DARI BOT MUSIK! 🔥 </h2>
 
 - Thumbnail Support
 - Playlist Support
@@ -14,8 +14,8 @@
 - Control with buttons
 - Userbot auto join
 
-### Commands 🛠
-#### For all in group
+### COMMAND! 🛠
+#### FITUR UNTUK MEMBER GRUP!
 
 - `/play <song name>` - play song you requested
 - `/dplay <song name>` - play song you requested via deezer
@@ -28,7 +28,7 @@
 - `/saavn <song name>` - download songs you want quickly via saavn
 - `/video <song name>` - download videos you want quickly
 
-#### Admins only.
+#### FITUR UNTUK ADMIN GRUP!.
 - `/player` - open music player settings panel
 - `/pause` - pause song play
 - `/resume` - resume song play
@@ -38,17 +38,16 @@
 - `/userbotleave` - remove assistant from your chat
 - `/admincache` - Refresh admin list
 
-## Based on Callsmusic-1 & DAISYXMUSIC
-
 ### Deploy To Heroku</h4>
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/mrismanaziz/Music-Man)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/anehajahlu/crystalmusic)
 
 ### Generate String Session
 
-Gabung Ke [Grup Support](https://t.me/sharinguserbot) Man-UserBot Lalu Ketik #string [TEKAN DISINI](https://t.me/sharinguserbot) Untuk Masuk Ke [Grup Support](https://t.me/sharinguserbot)
+Gabung Ke Grup & Channel Aku! [Grup Aku!](https://t.me/humangabutguys) Channel Grup! [Channel Aku!](https://t.me/captionanakmuda)
 
 ### Credits
+- [Afterday](https://github.com/anehajahlu)
 - [Risman](https://github.com/mrismanaziz)
 - [InukaASiTH](https://github.com/InukaAsith): Dev
 - [Wrench](https://github.com/EverythingSuckz/): Dev
