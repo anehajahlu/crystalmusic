@@ -6,10 +6,10 @@ from config import BOT_NAME as bn
 @Client.on_message(filters.command("start") & filters.private & ~filters.channel)
 async def start(_, message: Message):
     await message.reply_text(
-        f"""<b>👋🏻 Hai {message.from_user.first_name}!</b>
+        f"""<b>Haii Guys, Apa Kabar Kamu??:)) {message.from_user.first_name}!</b>
 
 Aku adalah Bot Musik Telegram, Apabila Ingin Menggunakan Aku Invite Aku Dan Assisten Aku Ya Biar Berjalan Dengan Lancar, Apabila Ada Kendala Tidak Tau Cara Pakainya Bisa PC OWNERNYA!:))
-━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━
 Bot : @Crystalisticbot - Asisten : @Assistencrystal
         """,
         reply_markup=InlineKeyboardMarkup(
