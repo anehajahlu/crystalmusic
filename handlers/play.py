@@ -155,8 +155,8 @@ async def playlist(client, message):
     now_playing = temp[0][0]
     by = temp[0][1].mention(style='md')
     msg = "**Lagu Yang Sedang dimainkan** di {}".format(message.chat.title)
-    msg += "\n- "+ now_playing
-    msg += "\n- Req by "+by
+    msg += "\n> "+ now_playing
+    msg += "\n> Permintaan By "+by
     temp.pop(0)
     if temp:
         msg += '\n\n'
@@ -164,8 +164,8 @@ async def playlist(client, message):
         for song in temp:
             name = song[0]
             usr = song[1].mention(style='md')
-            msg += f'\n- {name}'
-            msg += f'\n- Permintaan By {usr}\n'
+            msg += f'\n> {name}'
+            msg += f'\n> Permintaan By {usr}\n'
     await message.reply_text(msg)       
     
 # ============================= Settings =========================================
@@ -506,18 +506,18 @@ async def play(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton('📖 Daftar Putar', callback_data='playlist'),
+                    InlineKeyboardButton('🎶 Daftar Putar', callback_data='playlist'),
                     InlineKeyboardButton("🍃 Dashboard", callback_data='menu')
                 
                 ],                     
                 [
                     InlineKeyboardButton(
-                        "Owner Aku!", url="https://t.me/afterdaytoxic"
+                        "✨ Owner Aku!", url="https://t.me/afterdaytoxic"
                     )
                 ],
                 [       
                     InlineKeyboardButton(
-                        text="Tutup!",
+                        text="❌ Tutup!",
                         callback_data='cls')
 
                 ]                             
@@ -554,8 +554,8 @@ async def play(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption=f"🍃 **Judul:** {title}\n**⏱ Durasi:** {duration}\n" \
-                + f"🌙 **Status:** Playing\n🎧 **Permintaan:** {requested_by}".format(
+        caption=f"🍃 **Judul Lagu :** {title}\n**⏱ Durasi Lagu :** {duration}\n" \
+                + f"🌙 **Status Lagu :** Playing\n🎧 **Permintaan By :** {requested_by}".format(
         message.from_user.mention()
         ),
     )
@@ -648,12 +648,12 @@ async def deezer(client: Client, message_: Message):
                 ],                     
                 [
                     InlineKeyboardButton(
-                        "Owner Aku!", url="https://t.me/afterdaytoxic"
+                        "✨ Owner Aku!", url="https://t.me/afterdaytoxic"
                     )
                 ],
                 [       
                     InlineKeyboardButton(
-                        text="Tutup!",
+                        text="❌ Tutup!",
                         callback_data='cls')
 
                 ]                             
@@ -778,18 +778,18 @@ async def jiosaavn(client: Client, message_: Message):
             [   
                 [
                                
-                    InlineKeyboardButton('📖 Daftar Putar', callback_data='playlist'),
+                    InlineKeyboardButton('🎶 Daftar Putar', callback_data='playlist'),
                     InlineKeyboardButton("🍃 Dashboard", callback_data='menu')
                 
                 ],                     
                 [
                     InlineKeyboardButton(
-                        "Owner Aku!", url="https://t.me/afterdaytoxic"
+                        "✨ Owner Aku!", url="https://t.me/afterdaytoxic"
                     )
                 ],
                 [       
                     InlineKeyboardButton(
-                        text="Tutup!",
+                        text="❌ Tutup!",
                         callback_data='cls')
 
                 ]                             
