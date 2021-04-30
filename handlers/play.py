@@ -507,7 +507,7 @@ async def play(_, message: Message):
                 [
                                
                     InlineKeyboardButton('📖 Daftar Putar', callback_data='playlist'),
-                    InlineKeyboardButton("🍃 Dashboard', callback_data='menu')
+                    InlineKeyboardButton("🍃 Dashboard", callback_data='menu')
                 
                 ],                     
                 [
@@ -643,7 +643,7 @@ async def deezer(client: Client, message_: Message):
                 [
                                
                     InlineKeyboardButton('🎶 Daftar Putar', callback_data='playlist'),
-                    InlineKeyboardButton("Menu ⏯ ', callback_data='menu')
+                    InlineKeyboardButton("Menu ⏯", callback_data='menu')
                 
                 ],                     
                 [
@@ -779,7 +779,7 @@ async def jiosaavn(client: Client, message_: Message):
                 [
                                
                     InlineKeyboardButton('📖 Daftar Putar', callback_data='playlist'),
-                    InlineKeyboardButton("🍃 Dashboard', callback_data='menu')
+                    InlineKeyboardButton("🍃 Dashboard", callback_data='menu')
                 
                 ],                     
                 [
