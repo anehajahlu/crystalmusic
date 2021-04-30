@@ -19,13 +19,13 @@ Bot : @Crystalisticbot - Asisten : @Assistencrystal
                         "⚡ Owner Aku!", url="https://t.me/afterdaytoxic")
                   ],[
                     InlineKeyboardButton(
-                        "🍃 Channel Aku!", url="https://t.me/captionanakmuda"
+                        "🍃 Channel Aku!", url="https://t.me/captionanakmuda")
                     ),
                     InlineKeyboardButton(
                         "❤️ Grup Aku!", url="https://t.me/humangabutguys") 
                   ],[
                     InlineKeyboardButton(
-                        "👸 My Bot Help!", url="https://t.me/naylaanggitabot"
+                        "👸 My Bot Help!", url="https://t.me/naylaanggitabot")
                     )
                 ]
             ]
@@ -35,12 +35,12 @@ Bot : @Crystalisticbot - Asisten : @Assistencrystal
 
 @Client.on_message(filters.command("reload") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""**🎧 Pemutar Musik Is The On!**""",
+      await message.reply_text("""**💕 Pemutar Musik Is The On!**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Group Support", url="https://t.me/humangabutguys"
+                        "🌙 Group Support!", url="https://t.me/humangabutguys"
                     ),
                     InlineKeyboardButton(
                         "⚡ Owner Aku!", url="https://t.me/afterdaytoxic"
@@ -57,10 +57,10 @@ async def gstart(_, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "⚡ Pemilik", url="https://t.me/afterdaytoxic") 
+                        "⚡ Onwer Aku!", url="https://t.me/afterdaytoxic") 
                 ],[
                     InlineKeyboardButton(
-                        "Group Support", url="https://t.me/humangabutguys"
+                        "🌙 Group Support!", url="https://t.me/humangabutguys"
                     )
                 ]
             ]
