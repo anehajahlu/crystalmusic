@@ -1,8 +1,8 @@
 {
-  "name": "Bot MusicMan",
-  "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
+  "name": "Bot Crystal Music!",
+  "description": "Aku Pemutar Musik Ditelegram, Aku Akan Menemani Kamu Di Voice Chat Grup?.",
   "keywords": ["music", "voicechat", "telegram"],
-  "repository": "https://github.com/mrismanaziz/Music-Man",
+  "repository": "https://github.com/anehajahlu/crystalmusic",
   "stack": "container",
   "env": {
     "SESSION_NAME": {
