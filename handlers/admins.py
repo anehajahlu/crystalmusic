@@ -31,7 +31,7 @@ from helpers.filters import command, other_filters
 from helpers.decorators import errors, authorized_users_only
 from config import que, admins as a
 
-@Client.on_message(filters.command('admincache'))
+@Client.on_message(filters.command('adminreload'))
 async def update_admin(client, message):
     global a
     admins = await client.get_chat_members(message.chat.id, filter="administrators")
@@ -39,7 +39,7 @@ async def update_admin(client, message):
     for u in admins:
         new_ads.append(u.user.id)
     a[message.chat.id] = new_ads
-    await message.reply_text('Berhasil memperbarui daftar admin di **{}**'.format(message.chat.title))
+    await message.reply_text('✅ Berhasil memperbarui daftar admin di **{}**'.format(message.chat.title))
 
 
 
@@ -56,7 +56,7 @@ async def pause(_, message: Message):
         await message.reply_text("❗ Tidak ada Lagu yang sedang diputar!")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_text("▶️ Paused!")
+        await message.reply_text("▶️ Lagu Kamu Di-Paused!")
 
 
 @Client.on_message(command("resume") & other_filters)
@@ -71,7 +71,7 @@ async def resume(_, message: Message):
         await message.reply_text("❗ Tidak ada Lagu yang sedang dijeda!")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_text("⏸ Resumed!")
+        await message.reply_text("⏸ Lagu Kamu Di-Resumed!")
 
 
 @Client.on_message(command("end") & other_filters)
@@ -87,7 +87,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text("❌ Memberhentikan Lagu!")
+        await message.reply_text("🥺 I'm Sorry, Aku Berhenti Musik / Di-Stop!")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -118,9 +118,9 @@ async def skip(_, message: Message):
 
 
 @Client.on_message(
-    filters.command("adminreset")
+    filters.command("adminreload")
 )
 @errors
 async def admincache(client, message: Message):
     set(message.chat.id, [member.user for member in await message.chat.get_members(filter="administrators")])
-    #await message.reply_text(" Admin cache refreshed!")
+    #await message.reply_text(" Admin berhasil Diperbaharui!")
