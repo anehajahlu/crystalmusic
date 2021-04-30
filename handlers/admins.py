@@ -71,7 +71,7 @@ async def resume(_, message: Message):
         await message.reply_text("❗ Tidak ada Lagu yang sedang dijeda!")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_text("⏸ Lagu Kamu Di-Resumed!")
+        await message.reply_text("⏸ Lagu Kamu Di-Lanjutkan!")
 
 
 @Client.on_message(command("end") & other_filters)
@@ -114,7 +114,7 @@ async def skip(_, message: Message):
         skip = qeue.pop(0)
     if not qeue:
         return
-    await message.reply_text(f'- Melewati Lagu **{skip[0]}**\n- Sekarang Memutar Lagu **{qeue[0][0]}**')
+    await message.reply_text(f'> Melewati Lagu **{skip[0]}**\n> Sekarang Memutar Lagu **{qeue[0][0]}**')
 
 
 @Client.on_message(
