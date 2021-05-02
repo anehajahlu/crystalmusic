@@ -555,7 +555,7 @@ async def play(_, message: Message):
         photo="final.png",
         reply_markup=keyboard,
         caption=f"🍃 **Judul Lagu :** {title}\n**⏱ Durasi Lagu :** {duration}\n" \
-                + f"🌙 **Status Lagu :** Playing\n🎧 **Permintaan By :** {requested_by}".format(
+                + f"🌙 **Status Lagu :** Sedang Memutar Lagu\n🎧 **Permintaan By :** {requested_by}".format(
         message.from_user.mention()
         ),
     )
@@ -623,7 +623,7 @@ async def deezer(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     queryy = text[1]
     res = lel
-    await res.edit(f"Mencari ..... `{queryy}` dari deezer")
+    await res.edit(f"Sedang Mencari Lagu-mu!..... `{queryy}` dari deezer")
     try:
         arq = ARQ("https://thearq.tech")
         r = await arq.deezer(query=queryy, limit=1)
