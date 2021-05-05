@@ -122,13 +122,13 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     img = Image.open("temp.png")
     draw = ImageDraw.Draw(img)
     font = ImageFont.truetype("etc/font.otf", 32)
-    draw.text((205, 550), f"Judul Lagu!: {title}", (51, 215, 255), font=font)
+    draw.text((205, 550), f"Judul Lagu : {title}", (51, 215, 255), font=font)
     draw.text(
-        (205, 590), f"Durasi Lagu!: {duration}", (255, 255, 255), font=font
+        (205, 590), f"Durasi Lagu : {duration}", (255, 255, 255), font=font
     )
-    draw.text((205, 630), f"Penonton Lagu!: {views}", (255, 255, 255), font=font)
+    draw.text((205, 630), f"Penonton Lagu : {views}", (255, 255, 255), font=font)
     draw.text((205, 670),
-        f"Request By: {requested_by}",
+        f"Request Dari : {requested_by}",
         (255, 255, 255),
         font=font,
     )
@@ -154,18 +154,18 @@ async def playlist(client, message):
         temp.append(t)
     now_playing = temp[0][0]
     by = temp[0][1].mention(style='md')
-    msg = "**Lagu Yang Sedang dimainkan** di {}".format(message.chat.title)
+    msg = "**Lagu yang sedang dimainkan** di {}".format(message.chat.title)
     msg += "\n> "+ now_playing
-    msg += "\n> Permintaan By "+by
+    msg += "\n> Permintaan Dari : "+by
     temp.pop(0)
     if temp:
         msg += '\n\n'
-        msg += '**Antrian Lagu**'
+        msg += '**Antrian lagu**'
         for song in temp:
             name = song[0]
             usr = song[1].mention(style='md')
             msg += f'\n> {name}'
-            msg += f'\n> Permintaan By {usr}\n'
+            msg += f'\n> Permintaan Dari : {usr}\n'
     await message.reply_text(msg)       
     
 # ============================= Settings =========================================
@@ -176,10 +176,10 @@ def updated_stats(chat, queue, vol=100):
         stats = 'Pengaturan dari **{}**'.format(chat.title)
         if len(que) > 0:
             stats += '\n\n'
-            stats += 'Volume : {}%\n'.format(vol)
+            stats += 'Volume Musik : {}%\n'.format(vol)
             stats += 'Lagu dalam antrian : `{}`\n'.format(len(que))
             stats += 'Sedang dimainkan : **{}**\n'.format(queue[0][0])
-            stats += 'Permintaan By : {}'.format(queue[0][1].mention)
+            stats += 'Permintaan dari : {}'.format(queue[0][1].mention)
     else:
         stats = None
     return stats
