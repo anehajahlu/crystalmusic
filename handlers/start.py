@@ -66,3 +66,18 @@ async def gstart(_, message: Message):
             ]
         )
    )
+
+@Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
+async def gstart(_, message: Message):
+    await message.reply_text(
+        """**Klik tombol dibawah untuk melihat panduan menggunakan bot**""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "🦇 Cara Memakai Bot Music!", url="https://t.me/humangabutguys/91577"
+                    )
+                ]
+            ]
+        ),
+    )
