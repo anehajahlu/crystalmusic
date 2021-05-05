@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="./etc/logo_readme.jpg" alt="Crystal Music Logo">
+
 <h1 align="centre">🎵 CRYSTAL HEART MUSIC!</h1>
 
 ### Aku Pemutar Musik Di-Telegram, Aku Akan Menemani Ke-Galauan Di VOICE CHAT GRUP!
