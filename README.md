@@ -21,6 +21,7 @@
 #### FITUR UNTUK MEMBER GRUP!
 
 - `/play <song name>` - play song you requested
+- `/reply <song name>` - play song for INLINE BOT MUSIK, and reply messenger you
 - `/dplay <song name>` - play song you requested via deezer
 - `/splay <song name>` - play song you requested via jio saavn
 - `/playlist` - Show now playing list
@@ -45,7 +46,7 @@
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/anehajahlu/crystalmusic)
 
-### Generate String Session
+### GRUP DAN CHANNEL AKU! :
 
 Gabung Ke Grup & Channel Aku! [Grup Aku!](https://t.me/humangabutguys) Channel Grup! [Channel Aku!](https://t.me/captionanakmuda)
 
