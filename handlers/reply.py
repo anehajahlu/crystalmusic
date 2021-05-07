@@ -35,7 +35,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 @errors
 async def play(_, message: Message):
 
-    lel = await message.reply("🔄 **Sedang Proses**...")
+    lel = await message.reply("🔄 Sedang memproses lagumu...")
     sender_id = message.from_user.id
     sender_name = message.from_user.first_name
 
@@ -43,14 +43,14 @@ async def play(_, message: Message):
             [
                 [
                    InlineKeyboardButton(
-                       text="Manual",
-                       url='https://telegra.ph/Music-Bot-Command-04-15')
+                       text="📑 Manual Book!",
+                       url='https://t.me/humangabutguys/91577')
                 
                 ],                     
                 [
                     InlineKeyboardButton(
-                        text="Channel",
-                        url='https://t.me/TokaiMusik')
+                        text="🍃 Channel Aku!",
+                        url='https://t.me/captionanakmuda')
                    
                 ]
             ]
@@ -73,17 +73,17 @@ async def play(_, message: Message):
     elif url:
         file_path = await converter.convert(youtube.download(url))
     else:
-        return await lel.edit_text("Anda Tidak Memberi Saya Apapun Untuk Dimainkan, Silahkan Reply direct!")
+        return await lel.edit_text("Anda Tidak Memberi Saya Apapun Untuk Dimainkan, Silahkan Reply Pesanmu Dan Play Musik!")
 
     if message.chat.id in callsmusic.pytgcalls.active_calls:
         position = await queues.put(message.chat.id, file=file_path)
-        await lel.edit(f"#⃣ Lagu Request Kamu **Queued** Di Posisi {position}!")
+        await lel.edit(f"⚡ Lagu Request-an Kamu Di **Posisi** {position}!")
     else:
         callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
         await message.reply_photo(
-        photo="https://telegra.ph/file/d1adb5378a94e1a9a4daa.jpg",
+        photo="https://telegra.ph/file/0dc557931992a7dc2765e.jpg",
         reply_markup=keyboard,
-        caption = f"🏷 **Judul:** 404 Not Found\n🤖 **Player:** Tokai Music\n" \
-               + f"🎧 **Request Dari:** {message.from_user.mention}"
+        caption = f"🏷 **Judul Lagu :** Non Judul Lagu!\n🤖 **Player :** Crystal Heart Music!\n" \
+               + f"🎧 **Request Dari :** {message.from_user.mention}"
         ),
         return await lel.delete()
