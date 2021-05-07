@@ -596,7 +596,7 @@ async def deezer(client: Client, message_: Message):
 
                           try:
                               await USER.join_chat(invitelink)
-                              await USER.send_message(message_.chat.id,"Saya bergabung dengan grup ini untuk memainkan musik di VCG")
+                              await USER.send_message(message_.chat.id,"Aku sudah bergabung disini, ayo kita musikan! 🖤")
                               await lel.edit(
                                   "<b>Assisten bot bergabung dengan obrolan Anda</b>",
                               )
