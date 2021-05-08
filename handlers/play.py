@@ -1,4 +1,4 @@
-# Daisyxmusic (Telegram bot project)
+# crystalmusic (Telegram bot project)
 # Copyright (C) 2021  Inukaasith 
 
 # This program is free software: you can redistribute it and/or modify
@@ -148,7 +148,7 @@ async def playlist(client, message):
     global que
     queue = que.get(message.chat.id)
     if not queue:
-        await message.reply_text('Player is idle')
+        await message.reply_text('Tidak ada playlist saat ini!')
     temp = []
     for t in queue:
         temp.append(t)
