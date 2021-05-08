@@ -198,11 +198,11 @@ def r_ply(type_):
                 
             ],
             [
-                InlineKeyboardButton('Playlist 🎶', 'playlist'),
+                InlineKeyboardButton('🎶 Playlist', 'playlist'),
                 
             ],
             [       
-                InlineKeyboardButton("Tutup!",'cls')
+                InlineKeyboardButton("❌ Tutup!",'cls')
             ]        
         ]
     )
@@ -321,7 +321,7 @@ async def m_cb(b, cb):
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style='md')
-        msg = "**Lagu Yang Sedang dimainkan** di {}".format(cb.message.chat.title)
+        msg = "**Lagu yang sedang dimainkan** di {}".format(cb.message.chat.title)
         msg += "\n> "+ now_playing
         msg += "\n> Permintaan By "+by
         msg += "\n───────────────────────"
@@ -374,11 +374,11 @@ async def m_cb(b, cb):
                 
                 ],
                 [
-                    InlineKeyboardButton('Playlist 🎶', 'playlist'),
+                    InlineKeyboardButton('🎶 Playlist', 'playlist'),
                 
                 ],
                 [       
-                    InlineKeyboardButton("Tutup!",'cls')
+                    InlineKeyboardButton("❌ Tutup!",'cls')
                 ]        
             ]
         )
@@ -447,9 +447,9 @@ async def play(_, message: Message):
 
                           try:
                               await USER.join_chat(invitelink)
-                              await USER.send_message(message.chat.id,"Saya bergabung dengan grup ini untuk memainkan musik di VCG")
+                              await USER.send_message(message.chat.id,"Aku sudah bergabung guys disini, ayo sekarang mulai music! 🖤")
                               await lel.edit(
-                                  "<b>Assisten bot bergabung dengan obrolan Anda</b>",
+                                  "<b>Assisten bot sudah bergabung dengan obrolan Anda</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -457,7 +457,7 @@ async def play(_, message: Message):
                           except Exception as e:
                               #print(e)
                               await lel.edit(
-                                  f"<b>🔴 Flood Wait Error \nAssistant Bot tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk bot! Pastikan pengguna tidak dibanned/blokir dalam grup."
+                                  f"<b>❌ EMERGENCY NOT FOUND 404! \nAssistant Bot tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk bot! Pastikan pengguna tidak dibanned/blokir dalam grup."
                                   "\n\nAtau tambahkan secara manual @assistencrystal ke Grup Anda dan coba lagi</b>",
                               )
                               pass
@@ -537,7 +537,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
         photo="final.png", 
-        caption=f"⚡ Lagu yang Kamu minta **Sedang Antri** di posisi {position}!",
+        caption=f"⚡ Lagu yang Kamu minta **Di Antrian** di posisi {position}!",
         reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
@@ -606,7 +606,7 @@ async def deezer(client: Client, message_: Message):
                           except Exception as e:
                               #print(e)
                               await lel.edit(
-                                  f"<b>🔴 Flood Wait Error \nAssistant Bot tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk bot! Pastikan pengguna tidak dibanned/blokir dalam grup."
+                                  f"<b>❌ EMERGENCY NOT FOUND 404! \nAssistant Bot tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk bot! Pastikan pengguna tidak dibanned/blokir dalam grup."
                                   "\n\nAtau tambahkan secara manual @assistencrystal ke Grup Anda dan coba lagi</b>",
                               )
                               pass
@@ -623,7 +623,7 @@ async def deezer(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     queryy = text[1]
     res = lel
-    await res.edit(f"Sedang Mencari Lagu-mu!..... `{queryy}` dari deezer")
+    await res.edit(f"⏳ Sedang mencari lagu-mu!..... `{queryy}` dari deezer")
     try:
         arq = ARQ("https://thearq.tech")
         r = await arq.deezer(query=queryy, limit=1)
@@ -634,7 +634,7 @@ async def deezer(client: Client, message_: Message):
         url = r[0]["url"]
     except:
         await res.edit(
-            "Tidak Ditemukan Lagu Apa Pun!"
+            "❌ Tidak Ditemukan Lagu Apa Pun!"
         )
         is_playing = False
         return
@@ -738,7 +738,7 @@ async def jiosaavn(client: Client, message_: Message):
                           except Exception as e:
                               #print(e)
                               await lel.edit(
-                                  f"<b>🔴 Flood Wait Error \nAssistant Bot tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk bot! Pastikan pengguna tidak dibanned/blokir dalam grup."
+                                  f"<b>❌ EMERGENCY NOT FOUND 404! \nAssistant Bot tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk bot! Pastikan pengguna tidak dibanned/blokir dalam grup."
                                   "\n\nAtau tambahkan secara manual Assistant Bot ke Grup Anda dan coba lagi</b>",
                               )
                               pass
@@ -755,7 +755,7 @@ async def jiosaavn(client: Client, message_: Message):
     text = message_.text.split(" ", 1)
     query = text[1]
     res = lel
-    await res.edit(f"Sedang Mencari `{query}` dari jio saavn")
+    await res.edit(f"⏳ Sedang mencari lagumu .... `{query}` dari jio saavn")
     try:
         async with aiohttp.ClientSession() as session:
             async with session.get(
@@ -809,12 +809,12 @@ async def jiosaavn(client: Client, message_: Message):
             chat_id=message_.chat.id,
             reply_markup=keyboard,
             photo="final.png",
-            caption=f"⚡ Lagu yang Anda minta **Sedang Antri** di posisi {position}",
+            caption=f"⚡ Lagu yang Anda minta **Di Antrian** di posisi {position}",
         
         )           
            
     else:
-        await res.edit_text("Lagu sudah di-mulai!.....")
+        await res.edit_text("▶️ Lagumu sudah di-mulai!.....")
         chat_id = message_.chat.id
         que[chat_id] = []
         qeue = que.get(message_.chat.id)
