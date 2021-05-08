@@ -39,7 +39,7 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "MusicMan"
+        user.first_name =  "Crystal Music!"
 
     try:
         await USER.join_chat(invitelink)
@@ -52,7 +52,7 @@ async def addchannel(client, message):
     except Exception as e:
         print(e)
         await message.reply_text(
-            f"<b>🛑 Flood Wait Error \n Assistant {user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk bot!, Pastikan pengguna tidak dibanned/blokir dalam grup."
+            f"<b>❌ EMERGENCY NOT FOUND 404! \n Assistant {user.first_name} tidak dapat bergabung dengan grup Anda karena banyaknya permintaan bergabung untuk bot!, Pastikan pengguna tidak dibanned/blokir dalam grup."
             "\n\nAtau tambahkan secara manual @assistencrystal ke Grup Anda dan coba lagi</b>",
         )
         return
