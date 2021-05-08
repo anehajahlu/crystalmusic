@@ -41,7 +41,7 @@ async def start(_, message: Message):
      disable_web_page_preview=True
     )
 
-@Client.on_message(filters.command("reload") & ~filters.private & ~filters.channel)
+@Client.on_message(filters.command("refresh") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
       await message.reply_text("""**💕 Pemutar Musik Is The On!**""",
       reply_markup=InlineKeyboardMarkup(
