@@ -671,7 +671,7 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"#️⃣ Lagu yang Anda minta **Sedang Antri** di posisi {position}")
+        await res.edit_text(f"#️⃣ Lagu yang Anda minta **Di Antrian** di posisi {position}")
     else:
         await res.edit_text("Lagu sudah di-mulai!.....")
         chat_id = message_.chat.id
