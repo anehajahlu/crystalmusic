@@ -60,20 +60,24 @@ async def gstart(_, message: Message):
 
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
-      await message.reply_text("""**🎧 Pemutar Musik Is The On!**""",
+      await message.reply_text("""**Aku sudah online, ayo kita joget ceria! 🎶**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "⚡ Onwer Aku!", url="https://t.me/afterdaytoxic") 
+                        "🦇 Owner Aku!", url="https://t.me/afterdaytoxic"
+                    )
                 ],[
                     InlineKeyboardButton(
-                        "🌙 Group Support!", url="https://t.me/humangabutguys"
+                        "✅ Yes!", switch_inline_query_current_chat=""
+                    ),
+                    InlineKeyboardButton(
+                        "❌ No!", callback_data="close"
                     )
                 ]
             ]
         )
-   )
+    )
 
 @Client.on_message(filters.command("help") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
