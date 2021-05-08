@@ -31,7 +31,7 @@ from helpers.filters import command, other_filters
 from helpers.decorators import errors, authorized_users_only
 from config import que, admins as a
 
-@Client.on_message(filters.command('adminreload'))
+@Client.on_message(filters.command('refresh'))
 async def update_admin(client, message):
     global a
     admins = await client.get_chat_members(message.chat.id, filter="administrators")
@@ -39,7 +39,7 @@ async def update_admin(client, message):
     for u in admins:
         new_ads.append(u.user.id)
     a[message.chat.id] = new_ads
-    await message.reply_text('✅ Berhasil memperbarui daftar admin di **{}**'.format(message.chat.title))
+    await message.reply_text('✅ System REFRESH sudah diaktifkan, Daftar adminpun telah diperbaharui! **{}**'.format(message.chat.title))
 
 
 
@@ -87,7 +87,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text("🥺 I'm Sorry, Aku Berhenti Musik / Di-Stop!")
+        await message.reply_text("⏹️ Aku Sudah Berhenti Musik / Di-Stop!")
 
 
 @Client.on_message(command("skip") & other_filters)
@@ -118,7 +118,7 @@ async def skip(_, message: Message):
 
 
 @Client.on_message(
-    filters.command("adminreload")
+    filters.command("refresh")
 )
 @errors
 async def admincache(client, message: Message):
