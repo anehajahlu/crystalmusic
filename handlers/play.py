@@ -40,16 +40,6 @@ from pyrogram.errors import UserAlreadyParticipant
 import converter
 from downloaders import youtube
 
-from os import path
-
-from pyrogram import Client
-from pyrogram.types import Message, Voice
-
-from callsmusic import callsmusic, queues
-
-import converter
-from downloaders import youtube
-
 from config import BOT_NAME as bn, DURATION_LIMIT
 from helpers.filters import command, other_filters
 from helpers.decorators import errors, authorized_users_only
