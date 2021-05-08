@@ -138,62 +138,6 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
 
 
  
-@Client.on_message(command("reply") & other_filters)
-@errors
-async def play(_, message: Message):
-
-    lel = await message.reply("🔄 Sedang memproses lagumu...")
-    sender_id = message.from_user.id
-    sender_name = message.from_user.first_name
-
-    keyboard = InlineKeyboardMarkup(
-            [
-                [
-                   InlineKeyboardButton(
-                       text="📑 Manual Book!",
-                       url='https://t.me/humangabutguys/91577')
-                
-                ],                     
-                [
-                    InlineKeyboardButton(
-                        text="🍃 Channel Aku!",
-                        url='https://t.me/captionanakmuda')
-                   
-                ]
-            ]
-        )
-
-    audio = (message.reply_to_message.audio or message.reply_to_message.voice) if message.reply_to_message else None
-    url = get_url(message)
-
-    if audio:
-        if round(audio.duration / 240) > DURATION_LIMIT:
-            raise DurationLimitError(
-                f"❌ Video Dengan Durasi Melebihi {DURATION_LIMIT} minute(s) Tidak Diizinkan Untuk Diputar!"
-            )
-
-        file_name = get_file_name(audio)
-        file_path = await converter.convert(
-            (await message.reply_to_message.download(file_name))
-            if not path.isfile(path.join("downloads", file_name)) else file_name
-        )
-    elif url:
-        file_path = await converter.convert(youtube.download(url))
-    else:
-        return await lel.edit_text("Anda Tidak Memberi Saya Apapun Untuk Dimainkan, Silahkan Reply Pesanmu Dan Play Musik!")
-
-    if message.chat.id in callsmusic.pytgcalls.active_calls:
-        position = await queues.put(message.chat.id, file=file_path)
-        await lel.edit(f"⚡ Lagu Request-an Kamu Di **Posisi** {position}!")
-    else:
-        callsmusic.pytgcalls.join_group_call(message.chat.id, file_path)
-        await message.reply_photo(
-        photo="final.png",
-        reply_markup=keyboard,
-        caption = f"🏷 **Judul Lagu :** Non Judul Lagu!\n🤖 **Player :** Crystal Heart Music!\n" \
-               + f"🎧 **Request Dari :** {message.from_user.mention}"
-        ),
-        return await lel.delete()
 
 @Client.on_message(
     filters.command("playlist")
