@@ -41,23 +41,6 @@ async def start(_, message: Message):
      disable_web_page_preview=True
     )
 
-@Client.on_message(filters.command("refresh") & ~filters.private & ~filters.channel)
-async def gstart(_, message: Message):
-      await message.reply_text("""**💕 Pemutar Musik Is The On!**""",
-      reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "🌙 Group Support!", url="https://t.me/humangabutguys"
-                    ),
-                    InlineKeyboardButton(
-                        "⚡ Owner Aku!", url="https://t.me/afterdaytoxic"
-                    )
-                ]
-            ]
-        )
-   )
-
 @Client.on_message(filters.command("start") & ~filters.private & ~filters.channel)
 async def gstart(_, message: Message):
       await message.reply_text("""**Aku sudah online, ayo kita joget ceria! 🎶**""",
